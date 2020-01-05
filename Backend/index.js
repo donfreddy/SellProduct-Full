@@ -6,6 +6,8 @@ const express = require('express'),
     cors = require('cors'),
     mongoose = require('mongoose'),
     config = require('./DB');
+    
+    mongoose.set('useFindAndModify', false);
 
     const productRoute = require('./routes/product.route');
     mongoose.Promise = global.Promise;
